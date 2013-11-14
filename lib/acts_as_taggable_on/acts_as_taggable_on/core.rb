@@ -92,7 +92,7 @@ module ActsAsTaggableOn::Taggable
         having = []
         select_clause = []
 
-        taggable_type = optionde.delete(:taggable_type) || " = #{quote_value(base_class.name)}"
+        taggable_type = options.delete(:taggable_type) || " = #{quote_value(base_class.name)}"
 
         context = options.delete(:on)
         owned_by = options.delete(:owned_by)
